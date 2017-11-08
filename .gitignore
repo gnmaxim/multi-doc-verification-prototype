@@ -1,0 +1,8 @@
+node_modules/*
+build/*
+test/*
+*.png
+.directory
+.babelrc
+.eslintignore
+.eslintrc

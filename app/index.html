@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document Verification</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="./app.js"></script>
+  </head>
+  <body>
+    <h1>Document Verification</h1>
+    <h2>Prototype</h2>
+    <h3>Submitted on this contract: <span class="black"><span id="numdocs"></span> documents</span></h3>
+    <br>Contract Address: <span class="black" id="address"></span>
+    <br>Your Current Address: <span class="black" id="user_address"></span>
+    <br>Your Balance (ETH): <span class="black" id="user_balance"></span>
+    <br>
+    <br>
+    <h1>Add or Verify </h1>
+    <h2>Document</h2>
+    <br><span class="hint">Calculate document hash and submit to blockchain or verify existing document</span>
+
+    <br><br><input class="form-control" type="file" name="fileUpload" id="fileUpload" />
+
+    <br><button class="btn btn-default btn-lg float-right" onclick="App.calculateHash();">Calculate Hash</button>
+    <span class="hint"> Hash: <span id="doc_hash"></span></span>
+    <br><br>
+    <button class="btn btn-lg" onclick="App.submitDocument();">Submit Document</button>
+    <button class="btn btn-lg" onclick="App.verifyDocument();">Verify Document</button>
+    <br><br>
+    <span id="status"></span>
+    <br><br>
+    <span class="hint"><strong>Hint:</strong> open the browser developer console to view any errors and warnings.</span>
+    <br><br><br>
+  </body>
+</html>
